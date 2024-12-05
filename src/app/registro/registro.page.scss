@@ -1,0 +1,73 @@
+ion-content {
+  padding: 32px;
+}
+
+ion-title {
+  font-size: 28.8px;
+  color: white;
+  background-color: hsla(240, 15%, 9%, 1);
+  background-image: radial-gradient(
+    at 88% 40%, hsla(240, 15%, 9%, 1) 0px, transparent 85%
+  ), radial-gradient(
+    at 49% 30%, hsla(220, 25%, 15%, 1) 0px, transparent 85%
+  ), radial-gradient(
+    at 14% 26%, hsla(220, 25%, 15%, 1) 0px, transparent 85%
+  ), radial-gradient(
+    at 0% 64%, hsl(220, 70%, 30%) 0px, transparent 85%
+  ), radial-gradient(
+    at 41% 94%, hsl(220, 60%, 35%) 0px, transparent 85%
+  ), radial-gradient(
+    at 100% 99%, hsl(220, 80%, 25%) 0px, transparent 85%
+  );
+  padding: 16px;
+}
+
+ion-item {
+  --border-color: hsl(0, 0%, 0%);
+  margin-bottom: 16px;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+
+  --background: var(--ion-background-color);
+  --color: var(--ion-text-color);
+
+  &.dark {
+    --background: var(--ion-background-color-dark);
+    --color: var(--ion-text-color-dark);
+  }
+
+}
+
+ion-input,
+ion-textarea {
+  --padding-start: 16px;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+ion-button:hover {
+  --background: hsl(220, 70%, 40%);
+}
+
+.boton {
+  transform: scale(1);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.25);
+  }
+
+  &:active {
+    transform: scale(0.95);
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.25);
+  }
+}

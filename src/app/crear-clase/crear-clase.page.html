@@ -1,0 +1,73 @@
+<ion-content>
+  <div class="container mt-4">
+    <h2 class="text-center mb-4">Crear Clase</h2>
+
+    <ion-list>
+      <!-- Fecha -->
+      <ion-item>
+        <ion-datetime [(ngModel)]="fecha" label="Fecha" placeholder="Seleccione la fecha" 
+        display-format="YYYY-MM-DD" [min]="minFecha"></ion-datetime>
+      </ion-item>
+
+      <!-- Hora de Inicio -->
+      <ion-item>
+        <ion-input
+          [(ngModel)]="hora_inicio"
+          label="Hora de Inicio"
+          type="time"
+          placeholder="Ingrese la hora de inicio"
+        ></ion-input>
+      </ion-item>
+
+      <!-- Hora de Término -->
+      <ion-item>
+        <ion-input
+          [(ngModel)]="hora_termino"
+          label="Hora de Término"
+          type="time"
+          placeholder="Ingrese la hora de término"
+        ></ion-input>
+      </ion-item>
+  </ion-list>
+
+  <!-- Botón de Enviar -->
+    <div class="d-flex justify-content-center"> 
+      <ion-button
+        id="open-modal"
+        expand="block"
+        (click)="enviarFormulario()"
+      >
+      crear Clase
+      </ion-button>
+
+      <ion-modal #modal trigger="open-modal" [enterAnimation]="enterAnimation" [leaveAnimation]="leaveAnimation">
+      <ng-template>
+        <ion-header>
+        <ion-toolbar>
+          <ion-title>Modal</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="modal.dismiss()">Close</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content >
+        <div class="qr-container">
+          <div class="qr">
+            <qr-code [value]="codeClass" size="300" errorCorrectionLevel="M"/>
+            <div class="qr-text">
+              <h3>{{codeClass}}</h3>
+            </div>
+          </div>
+        </div>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+    </div>
+
+
+    <!-- Botón Volver -->
+    <div class="Volver-btn">
+      <ion-button class="boton" color="danger" routerLink="/asignaturas-profesor">Volver</ion-button>
+    </div>
+  </div>
+</ion-content>

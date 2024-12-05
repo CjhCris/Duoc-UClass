@@ -1,0 +1,135 @@
+/* Estilo global para el contenido */
+ion-content {
+  padding: 32px;
+}
+
+/* Estilo para el contenedor principal */
+.container {
+  background-color: #ffffff; 
+  border-radius: 10px; 
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1); 
+  padding: 32px;
+  max-width: 600px;
+  margin: 0 auto; 
+}
+
+/* Título principal */
+h2 {
+  font-size: 28.8px;
+  margin-bottom: 16px;
+  color: white;
+  background-color: hsla(240, 15%, 9%, 1);
+  background-image: radial-gradient(
+      at 88% 40%,
+      hsla(240, 15%, 9%, 1) 0px,
+      transparent 85%
+    ),
+    radial-gradient(at 49% 30%, hsla(220, 25%, 15%, 1) 0px, transparent 85%),
+    radial-gradient(at 14% 26%, hsla(220, 25%, 15%, 1) 0px, transparent 85%),
+    radial-gradient(at 0% 64%, hsl(220, 70%, 30%)  0px, transparent 85%),
+    radial-gradient(at 41% 94%, hsl(220, 60%, 35%) 0px, transparent 85%),
+    radial-gradient(at 100% 99%, hsl(220, 80%, 25%) 0px, transparent 85%);
+    padding: 16px;
+    border-radius: 16px;
+}
+
+/* Estilo para los items dentro de la lista */
+ion-item {
+  --background: hsl(0, 0%, 98%);
+  --border-color: hsl(0, 0%, 0%);
+  margin-bottom: 16px;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+}
+
+ion-input,
+ion-textarea {
+  --padding-start: 16px;
+}
+
+/* Estilo para el botón */
+ion-button {
+  --background: hsl(220, 70%, 50%); 
+  --color: white; 
+  --border-radius: 25px; 
+  --height: 50px; 
+  font-size: 16px;
+  margin-top: 32px; 
+  transition: background-color 0.3s ease;
+}
+
+
+ion-button:hover {
+  --background: hsl(220, 70%, 40%); 
+}
+
+
+.d-flex {
+  display: flex;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+:root {
+  --ion-background-color: #fff;
+  --ion-text-color: #000;
+  --ion-border-color: #ccc;
+
+  // Modo oscuro
+  --ion-background-color-dark: #121212;
+  --ion-text-color-dark: #fff;
+  --ion-border-color-dark: #555;
+}
+
+
+body {
+  background-color: var(--ion-background-color);
+  color: var(--ion-text-color);
+  border-color: var(--ion-border-color);
+
+  &.dark {
+    background-color: var(--ion-background-color-dark);
+    color: var(--ion-text-color-dark);
+    border-color: var(--ion-border-color-dark);
+  }
+}
+
+.container {
+  padding: 16px;
+  background-color: var(--ion-background-color);
+  border-radius: 8px;
+
+  &.dark {
+    background-color: var(--ion-background-color-dark);
+  }
+}
+
+
+ion-item {
+  --background: var(--ion-background-color);
+  --color: var(--ion-text-color);
+
+  &.dark {
+    --background: var(--ion-background-color-dark);
+    --color: var(--ion-text-color-dark);
+  }
+}
+
+ion-button {
+  --background: linear-gradient(145deg, #6ca3fc, #17158e);
+  --color: #fff;
+}
+.boton:hover {
+  transform: scale(1.05); 
+  box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.25); 
+}
+
+.boton:active {
+  transform: scale(0.95); 
+  box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.25);}
+
+
+  //css listo

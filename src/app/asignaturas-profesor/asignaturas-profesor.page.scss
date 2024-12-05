@@ -1,0 +1,140 @@
+ion-header {
+  text-align: center;
+}
+
+ion-content {
+  padding: 32px;
+  background-color: var(--ion-background-color);
+}
+
+h2 {
+  font-size: 28.8px;
+  text-align: center;
+  color: white;
+  margin-bottom: 24px;
+  background-color: hsla(240, 15%, 9%, 1);
+  background-image: radial-gradient(
+    at 88% 40%,
+    hsla(240, 15%, 9%, 1) 0px,
+    transparent 85%
+  ),
+  radial-gradient(at 49% 30%, hsla(220, 25%, 15%, 1) 0px, transparent 85%),
+  radial-gradient(at 14% 26%, hsla(220, 25%, 15%, 1) 0px, transparent 85%),
+  radial-gradient(at 0% 64%, hsl(220, 70%, 30%) 0px, transparent 85%),
+  radial-gradient(at 41% 94%, hsl(220, 60%, 35%) 0px, transparent 85%),
+  radial-gradient(at 100% 99%, hsl(220, 80%, 25%) 0px, transparent 85%);
+  padding: 16px;
+  border-radius: 16px;
+
+  /* Ajustes para el modo oscuro */
+  &.dark {
+    background-color: var(--ion-background-color-dark);
+    color: var(--ion-text-color-dark);
+  }
+}
+
+ion-list {
+  margin-top: 16px;
+}
+
+ion-item {
+  --background: var(--ion-background-color);
+  --color: var(--ion-text-color);
+  border-radius: 8px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.05);
+  margin-bottom: 16px;
+  padding: 16px;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  /* Ajustes para el modo oscuro */
+  &.dark {
+    --background: var(--ion-background-color-dark);
+    --color: var(--ion-text-color-dark);
+    box-shadow: 0 1px 5px rgba(255, 255, 255, 0.1);
+  }
+}
+
+ion-label h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: white;
+
+  /* Modo oscuro */
+  &.dark {
+    color: var(--ion-text-color-dark);
+  }
+}
+
+ion-label p {
+  font-size: 14px;
+  color: gray;
+
+  /* Modo oscuro */
+  &.dark {
+    color: lightgray;
+  }
+}
+
+.crear-btn, .ver-btn, .ver-asistencia-btn {
+  margin-top: 8px;
+}
+
+.boton {
+  --background: hsl(220, 70%, 50%);
+  --color: white;
+  --border-radius: 25px;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    --background: hsl(220, 70%, 40%);
+  }
+
+  /* Ajustes para el modo oscuro */
+  &.dark {
+    --background: hsl(220, 70%, 40%);
+    --color: white;
+  }
+}
+
+/* Estilo para los botones en la misma línea */
+.button-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 8px;
+  gap: 8px; /* Añade un pequeño espacio entre los botones */
+}
+
+/* Mensaje de no cursos */
+p {
+  text-align: center;
+  color: gray;
+  font-size: 16px;
+  margin-top: 24px;
+
+  /* Modo oscuro */
+  &.dark {
+    color: lightgray;
+  }
+}
+
+
+//css listo
+
+ion-tab-bar {
+  --ion-tab-bar-background: hsl(220, 25%, 15%); /* Azul oscuro para el fondo */
+  --ion-tab-bar-border-color: hsl(220, 20%, 25%); /* Azul claro para el borde */
+  --color: hsl(220, 15%, 75%); /* Azul grisáceo para los íconos y texto inactivos */
+  --color-selected: hsl(220, 70%, 50%); /* Azul vibrante para el seleccionado */
+  position: fixed; /* Fijar la posición */
+  bottom: 0; /* Asegurarlo en la parte inferior */
+  width: 100%; /* Asegurar que ocupe todo el ancho */
+  z-index: 10; /* Mantenerlo encima de otros elementos */
+}
+

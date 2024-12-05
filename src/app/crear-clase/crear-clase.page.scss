@@ -1,0 +1,214 @@
+/* Estilos generales */
+:root {
+    --primary-bg-light: #f9f9f9;  /* Fondo claro */
+    --primary-bg-dark: #121212;   /* Fondo oscuro */
+    --input-bg-light: #ffffff;    /* Fondo de inputs en modo claro */
+    --input-bg-dark: #333333;     /* Fondo de inputs en modo oscuro */
+    --card-bg-light: #ffffff;     /* Fondo de las tarjetas en modo claro */
+    --card-bg-dark: #1e1e1e;      /* Fondo de las tarjetas en modo oscuro */
+    --button-bg-light: #007bff;   /* Color de fondo de los botones */
+    --button-bg-dark: #444;       /* Color de fondo de los botones en modo oscuro */
+    --text-light: #fff;           /* Texto blanco */
+    --text-dark: #121212;         /* Texto negro */
+    --border-color-light: #ddd;   /* Borde claro */
+    --border-color-dark: #444;    /* Borde oscuro */
+    --hover-color: #0056b3;       /* Color de hover */
+  }
+  
+  /* Contenedor principal */
+  .container {
+    margin-top: 64px;
+    padding: 0 16px;
+    h2 {
+      text-align: center;
+      margin-bottom: 16px;
+      font-size: 32px;
+      color: var(--text-dark);
+    }
+  }
+  
+  /* Listado de formularios */
+  ion-list {
+    --background: transparent;
+  }
+  
+  /* Estilo de los items dentro de ion-list */
+  ion-item {
+    background-color: var(--input-bg-light); /* Fondo claro para los inputs */
+    border: 1px solid var(--border-color-light);
+    margin-bottom: 16px;
+    border-radius: 8px;
+    
+    ion-label {
+      color: var(--text-dark);
+    }
+  
+    ion-input,
+    ion-datetime {
+      --background: var(--input-bg-light);
+      --border-color: var(--border-color-light);
+    }
+  
+    /* Inputs en modo oscuro */
+    .dark-mode & {
+      background-color: var(--input-bg-dark);
+      border-color: var(--border-color-dark);
+  
+      ion-label {
+        color: var(--text-light);
+      }
+  
+      ion-input,
+      ion-datetime {
+        --background: var(--input-bg-dark);
+        --border-color: var(--border-color-dark);
+        color: var(--text-light);
+      }
+    }
+  }
+  
+  /* Modal de creación de clase */
+  ion-modal {
+    --background: var(--primary-bg-dark);
+    --border-radius: 16px;
+  
+    .modal-content {
+      padding: 16px;
+      background-color: var(--card-bg-dark);
+      color: var(--text-light);
+  
+      h2 {
+        font-size: 32px;
+        color: var(--text-light);
+        text-align: center;
+      }
+  
+      p {
+        text-align: center;
+        color: var(--text-light);
+      }
+  
+      /* Código QR */
+      .qr-code {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 32px;
+      }
+    }
+  
+    /* Modo claro */
+    .light-mode & {
+      --background: var(--primary-bg-light);
+  
+      .modal-content {
+        background-color: var(--card-bg-light);
+        color: var(--text-dark);
+  
+        h2 {
+          color: var(--text-dark);
+        }
+  
+        p {
+          color: var(--text-dark);
+        }
+      }
+    }
+  }
+  
+  /* Estilo del botón de Crear Clase */
+  ion-button {
+    background-color: var(--button-bg-light);
+    color: var(--text-light);
+    font-size: 16px;
+    padding: 12px 24px;
+    border-radius: 8px;
+    margin-top: 32px;
+    
+    &:hover {
+      background-color: var(--hover-color);
+    }
+  
+    .dark-mode & {
+      background-color: var(--button-bg-dark);
+      color: var(--text-light);
+      
+      &:hover {
+        background-color: var(--hover-color);
+      }
+    }
+  }
+  
+  /* Botón Volver */
+  .Volver-btn {
+    margin-top: 16px;
+    text-align: center;
+  
+    ion-button {
+      background-color: var(--button-bg-light);
+      color: var(--text-light);
+      font-size: 16px;
+      padding: 12px 24px;
+      border-radius: 8px;
+  
+      &:hover {
+        background-color: var(--hover-color);
+      }
+    }
+  
+    .dark-mode & {
+      ion-button {
+        background-color: var(--button-bg-dark);
+        color: var(--text-light);
+        
+        &:hover {
+          background-color: var(--hover-color);
+        }
+      }
+    }
+  }
+  
+  /* Estilos adicionales en el modo oscuro */
+  .dark-mode {
+    --primary-bg: var(--primary-bg-dark);
+    --input-bg: var(--input-bg-dark);
+    --text-color: var(--text-light);
+    --button-bg: var(--button-bg-dark);
+    --border-color: var(--border-color-dark);
+  }
+
+
+  //css listo
+
+.qr-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  max-height: 100dvh;
+  width: 100%;
+}
+  
+.qr {
+  
+  justify-content: center;
+  align-items: center;
+  border: 10px solid #3d00f6; 
+  padding: 0px; 
+  border-radius: 12px; 
+  background-color: #f8f9fa; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+  
+.qr qr-code {
+  max-width: 100%;
+  max-height: 100%;
+}
+  
+.qr-text {
+  text-align: center;
+  margin-top: 10px; /* Espaciado entre el QR y el texto */
+  color: #007bff; /* Color del texto */
+}
+

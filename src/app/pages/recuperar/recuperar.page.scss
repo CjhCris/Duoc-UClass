@@ -1,0 +1,98 @@
+:root {
+    --primary-bg-light: #f9f9f9; /* Fondo claro */
+    --primary-bg-dark: #121212; /* Fondo oscuro */
+    --input-bg-light: #ffffff; /* Fondo de inputs en modo claro */
+    --input-bg-dark: #333333; /* Fondo de inputs en modo oscuro */
+    --card-bg-light: #ffffff; /* Fondo de las tarjetas en modo claro */
+    --card-bg-dark: #1e1e1e; /* Fondo de las tarjetas en modo oscuro */
+    --button-bg-light: #007bff; /* Color de fondo de los botones */
+    --button-bg-dark: #444; /* Color de fondo de los botones en modo oscuro */
+    --text-light: #fff; /* Texto blanco */
+    --text-dark: #121212; /* Texto negro */
+    --border-color-light: #ddd; /* Borde claro */
+    --border-color-dark: #444; /* Borde oscuro */
+    --hover-color: #0056b3; /* Color de hover */
+  }
+  
+  #open-action-sheet {
+    justify-content: center;
+    margin-top: 50%;
+    padding-left: 25%;
+  }
+  
+  #ion-label-b {
+    padding-left: 80%;
+  }
+  
+  ion-title {
+    font-size: medium;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .boton,
+  .Volver-btn ion-button {
+    width: 50%;
+    height: 40px;
+    margin-left: 25%; 
+    margin-top: center;
+    background-color: var(--button-bg-light);
+    color: #fff;
+    border-radius: 8px;
+  
+    &:hover {
+      background-color: var(--hover-color);
+    }
+  
+    .dark-mode & {
+      background-color: var(--button-bg-dark);
+  
+      &:hover {
+        background-color: var(--hover-color);
+      }
+    }
+  }
+  
+  ion-list {
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    --background: transparent;
+  }
+  
+  ion-item {
+    background-color: var(--input-bg-light);
+    border: 1px solid var(--border-color-light);
+    margin-bottom: 16px;
+    border-radius: 8px;
+  
+    ion-label {
+      color: var(--text-dark);
+    }
+  
+    ion-input,
+    ion-datetime {
+      --background: var(--input-bg-light);
+      --border-color: var(--border-color-light);
+    }
+  
+    .dark-mode & {
+      background-color: var(--input-bg-dark);
+      border-color: var(--border-color-dark);
+  
+      ion-label {
+        color: var(--text-light);
+      }
+  
+      ion-input,
+      ion-datetime {
+        --background: var(--input-bg-dark);
+        --border-color: var(--border-color-dark);
+        color: var(--text-light);
+      }
+    }
+  }
+  
+  h1 {
+    margin-left: 13%;
+  }

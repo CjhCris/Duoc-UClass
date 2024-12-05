@@ -1,0 +1,68 @@
+<ion-content>
+  <div class="container mt-4">
+    <h2 class="text-center mb-4">Clases del {{ cursoNombre }}</h2>
+
+    <ion-list *ngIf="clases.length > 0; else noClases">
+      <ion-item *ngFor="let clase of clases; let i = index">
+        <ion-label>
+          <h2><strong>Clase {{ i + 1 }}</strong></h2> <!-- Número de clase (comienza desde 1) -->
+          <p><strong>Fecha:</strong> {{ clase.fecha }}</p>
+          <h3><strong>Desde: </strong> {{ clase.hora_inicio }} <br> <strong>Hasta: </strong>{{ clase.hora_termino }} <br> {{ clase.codigo_web }}</h3>
+        </ion-label>
+        <ion-button id="open-modal" (click)="verAsistenciaClase(idCurso,clase.codigo_web)">
+          <ion-icon name="add-outline"></ion-icon>
+          <ion-label> Ver Asistencia</ion-label>
+        </ion-button>
+        <ion-button id="open-modal-qr" (click)="generarQr(clase.codigo_web)">
+          <ion-icon name="add-outline"></ion-icon>
+          <ion-label> generar Qr </ion-label>
+        </ion-button>
+      </ion-item>
+    </ion-list>
+
+    <ion-modal #modal trigger="open-modal" [enterAnimation]="enterAnimation" [leaveAnimation]="leaveAnimation">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Modal</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="modal.dismiss()">Close</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+        
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+  <ion-modal #modal trigger="open-modal-qr" [enterAnimation]="enterAnimation" [leaveAnimation]="leaveAnimation">
+      <ng-template>
+        <ion-header>
+        <ion-toolbar>
+          <ion-title>Modal</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="modal.dismiss()">Close</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content >
+        
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+    <ng-template #noClases>
+      <ion-item>
+        <ion-label>
+          <h3>No hay clases disponibles para este curso.</h3>
+        </ion-label>
+      </ion-item>
+    </ng-template>
+  </div>
+</ion-content>
+<ion-tab-bar slot="bottom">
+  <ion-tab-button tab="home" routerLink="/asignaturas-profesor">
+    <ion-icon name="arrow-back-outline"></ion-icon>
+    <ion-label>volver</ion-label>
+</ion-tab-button>

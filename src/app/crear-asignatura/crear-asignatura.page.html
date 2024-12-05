@@ -1,0 +1,42 @@
+<ion-content>
+  <div class="container mt-4">
+    <h2 class="text-center mb-4">Crear Asignatura</h2>
+      
+      <!-- Nombre de Asignatura -->
+      <ion-list>
+        <ion-item>
+          <ion-input [(ngModel)] = "nombre"  type="text" placeholder="Ingrese el nombre de la asignatura">
+          </ion-input>
+        </ion-item>
+
+      <!-- Sigla -->
+        <ion-item >
+          <ion-input [(ngModel)]="sigla" placeholder="Sigla" type="text"></ion-input>
+        </ion-item>
+
+      <!-- Institución -->
+        <ion-item>
+          <ion-input [(ngModel)]="institucion"  placeholder="Ingrese el nombre de la institucion"></ion-input>
+        </ion-item>
+
+      <!-- Descripción -->
+        <ion-item>
+          <ion-textarea [(ngModel)]="descripcion"  placeholder="Ingrese una descripcion">
+          </ion-textarea>
+        </ion-item>
+      </ion-list>
+
+      <!-- Botón de Enviar -->
+      <div class="d-flex justify-content-center">
+        <ion-button expand="block" (click)="enviarFormulario({sigla:sigla, nombre:nombre, institucion:institucion, descripcion:descripcion })">
+          Crear Asignatura
+        </ion-button>
+        <div class="Volver-btn">
+          <ion-button class="boton" color="danger" routerLink="/home">Volver</ion-button>
+        </div>
+      </div>
+
+      
+
+  </div>
+</ion-content>

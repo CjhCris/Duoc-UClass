@@ -1,0 +1,44 @@
+<ion-tabs>
+  <ion-tab tab="home">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Mis cursos</ion-title>
+        
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <h2 style="text-align: center;">Mis cursos</h2>
+      <div *ngIf="cursos.length > 0">
+        <ion-list>
+          <ion-item *ngFor="let curso of cursos">
+            <ion-label>
+              <!-- Mostrar la imagen del curso -->
+              <ion-img [src]="curso.imagen" alt="{{ curso.nombre }}" style="max-width: 100%; height: auto;"></ion-img>
+
+              <h2>{{ curso.nombre }}</h2>
+              <p>{{ curso.descripcion || 'Información adicional sobre el curso.' }}</p>
+              
+              <div class="button-group">
+                <ion-button class="boton" color="primary" (click)="guardarCursoId(curso.id)" routerLink="/crear-clase">
+                  Crear Clase
+                </ion-button>
+                <ion-button class="boton" color="secondary" (click)="guardarCursoId(curso.id)" routerLink="/ver-clases">
+                  Ver Clases
+                </ion-button>
+              </div>
+            </ion-label>
+          </ion-item>
+        </ion-list>
+      </div>
+      <div *ngIf="cursos.length === 0">
+        <p>No hay cursos disponibles.</p>
+      </div>
+    </ion-content>
+  </ion-tab>
+</ion-tabs>
+<ion-tab-bar slot="bottom">
+  <ion-tab-button tab="home" routerLink="/home">
+    <ion-icon name="arrow-back-outline"></ion-icon>
+    <ion-label>volver</ion-label>
+</ion-tab-button>

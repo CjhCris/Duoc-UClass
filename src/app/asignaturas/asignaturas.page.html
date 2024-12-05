@@ -1,0 +1,89 @@
+<ion-tabs>
+  <ion-tab tab="home">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Ver asignaturas</ion-title>
+        <ion-buttons slot="start">
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content>
+      <h2 style="text-align: center;">Mis asignaturas</h2>
+      <div>
+        <div id="carouselCursos" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button
+              *ngFor="let curso of cursos; let i = index"
+              type="button"
+              data-bs-target="#carouselCursos"
+              [attr.data-bs-slide-to]="i"
+              [class.active]="i === 0"
+              aria-current="i === 0 ? 'true' : null"
+              [attr.aria-label]="'Slide ' + (i + 1)">
+            </button>
+          </div>
+          <div class="carousel-inner">
+            <div 
+              *ngFor="let curso of cursos; let i = index" 
+              class="carousel-item" 
+              [class.active]="i === 0">
+              <!-- Card de Ionic dentro del slide -->
+              <div class="card-container">
+                <div class="card">
+                  <div class="card__border"></div>
+                  <!-- Imagen del curso -->
+                  <img [src]="curso.imagen" alt="Imagen del curso {{ curso.nombre }}" class="card-image" />
+                  <!-- Nombre de la clase sobre la imagen -->
+                  <div class="card_title__container">
+                    <h2 class="card_title">{{ curso.nombre }}</h2>
+                  </div>
+                  <hr class="line" />
+                  <!-- Descripción debajo de la imagen -->
+                  <div class="card_description__container">
+                    <p class="card_paragraph">{{ curso.descripcion }}</p>
+                    <div class="id-sigla card_paragraph">
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselCursos" data-bs-slide="prev" aria-label="Anterior">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselCursos" data-bs-slide="next" aria-label="Siguiente">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+          </button>
+        </div>
+        <div>
+          <div class="datetime-wrapper">
+            <div class="datetime-card">
+              <div class="datetime-card__border"></div>
+              <ion-datetime class="datetime" presentation="date"></ion-datetime>
+            </div>
+          </div>                   
+        </div>
+        <div *ngIf="cursos.length === 0">
+          <p>No hay cursos disponibles.</p>
+        </div>
+      </div>
+    </ion-content>
+  </ion-tab>
+
+  <ion-tab tab="qr">
+    <ion-content>
+      <h2 style="text-align: center;">Escanear QR</h2>     
+    </ion-content>
+  </ion-tab>
+
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button tab="home" routerLink="/home">
+      <ion-icon name="home-outline"></ion-icon>
+      <ion-label>Home</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

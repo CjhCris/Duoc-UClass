@@ -1,0 +1,383 @@
+.ion-content {
+  background: #f9f9f9; 
+  padding: 16px;
+
+.h2 {
+    text-align: center; 
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #f9f9f9;
+  }
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    gap: 16px; 
+  }
+}
+/* Configuración básica del carrusel */
+.carousel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200%;
+  opacity: 0; /* Inicialmente oculto */
+  transition: transform 0.7s ease-out, opacity 0.7s ease-out; /* Animación suave */
+}
+
+/* Elemento activo */
+.carousel-item.active {
+  opacity: 1; /* Visible solo la card activa */
+  transform: translateX(0);
+}
+
+/* Elementos fuera de pantalla */
+.carousel-item-next,
+.carousel-item-prev {
+  opacity: 0;
+  transform: translateX(100%); /* Próximo: sale por la derecha */
+}
+
+.carousel-item-prev {
+  transform: translateX(-100%); /* Anterior: sale por la izquierda */
+}
+
+/*style de las cards*/
+.card {
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(220, 25%, 15%);
+  --paragraph: hsl(220, 15%, 75%);
+  --line: hsl(220, 20%, 25%); 
+  --primary: hsl(220, 70%, 50%);
+
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  padding: 16px;
+  width: 304px;
+  background-color: hsla(240, 15%, 9%, 1);
+  background-image: radial-gradient(
+      at 88% 40%,
+      hsla(240, 15%, 9%, 1) 0px,
+      transparent 85%
+    ),
+    radial-gradient(at 49% 30%, hsla(220, 25%, 15%, 1) 0px, transparent 85%),
+    radial-gradient(at 14% 26%, hsla(220, 25%, 15%, 1) 0px, transparent 85%),
+    radial-gradient(at 0% 64%, hsl(220, 70%, 30%)  0px, transparent 85%),
+    radial-gradient(at 41% 94%, hsl(220, 60%, 35%) 0px, transparent 85%),
+    radial-gradient(at 100% 99%, hsl(220, 80%, 25%) 0px, transparent 85%);
+
+  border-radius: 16px;
+  box-shadow: 0px -16px 24px 0px rgba(255, 255, 255, 0.25) inset;
+}
+
+.card .card__border {
+  overflow: hidden;
+  pointer-events: none;
+
+  position: absolute;
+  z-index: -10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  background-image: linear-gradient(
+    0deg,
+    hsl(220, 70%, 50%)  -50%,
+    hsl(220, 20%, 30%) 100%
+  );
+
+  border-radius: 16px;
+}
+
+.card .card__border::before {
+  content: "";
+  pointer-events: none;
+
+  position: fixed;
+  z-index: 200;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%), rotate(0deg);
+  transform-origin: left;
+
+  width: 200%;
+  height: 160px;
+  background-image: linear-gradient(
+    0deg,
+    hsla(0, 0%, 100%, 0) 0%,
+    hsl(220, 70%, 50%) 40%,
+    hsl(220, 70%, 50%) 60%,
+    hsla(220, 20%, 30%, 0) 100%
+  );
+
+  animation: rotate 8s linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.card .card_title__container .card_title {
+  font-size: 16px;
+  color: var(--white);
+}
+
+.card .card_title__container .card_paragraph {
+  margin-top: 4px;
+  width: 65%;
+
+  font-size: 13px;
+  color: var(--paragraph);
+}
+
+.card .line {
+  width: 100%;
+  height: 0.16px;
+  background-color: var(--line);
+
+  border: none;
+}
+
+.card .card__list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.card .card__list .card__list_item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.card .card__list .card__list_item .check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 16px;
+  height: 16px;
+  background-color: var(--primary);
+
+  border-radius: 50%;
+}
+
+.card .card__list .card__list_item .check .check_svg {
+  width: 12px;
+  height: 12px;
+
+  fill: var(--black);
+}
+
+.card .card__list .card__list_item .list_text {
+  font-size: 12px;
+  color: var(--white);
+}
+
+.card .button {
+  cursor: pointer;
+
+  padding: 8px;
+  width: 100%;
+  background-image: linear-gradient(
+    0deg,
+    hsl(220, 70%, 50%),
+    hsl(220, 60%, 30%) 100%
+  );
+
+  font-size: 12px;
+  color: var(--white);
+
+  border: 0;
+  border-radius: 9999px;
+  box-shadow: inset 0 -2px 25px -4px var(--white);
+}
+/*style de los botones*/
+ion-tab-bar {
+  --ion-tab-bar-background: hsl(220, 25%, 15%); /* Azul oscuro para el fondo */
+  --ion-tab-bar-border-color: hsl(220, 20%, 25%); /* Azul claro para el borde */
+  --color: hsl(220, 15%, 75%); /* Azul grisáceo para los íconos y texto inactivos */
+  --color-selected: hsl(220, 70%, 50%); /* Azul vibrante para el seleccionado */
+}
+
+ion-tab-button {
+  font-size: 13px; /* Ajusta el tamaño del texto */
+  --ripple-color: hsl(220, 70%, 50%); /* Color de la animación ripple */
+}
+
+ion-icon {
+  font-size: 16px; /* Tamaño del ícono */
+}
+
+ion-label {
+  margin-top: 3px; /* Ajuste de espacio entre el ícono y el texto */
+}
+/*style header*/
+ion-header {
+  --background: hsl(220, 25%, 15%); /* Fondo azul oscuro */
+  --color: hsl(220, 15%, 75%); /* Texto en azul grisáceo */
+  --ion-toolbar-border-color: hsl(220, 20%, 25%); /* Borde azul claro */
+}
+
+ion-toolbar {
+  --background: hsl(220, 25%, 15%); /* Fondo del toolbar */
+  --color: hsl(220, 15%, 75%); /* Color del texto */
+}
+
+ion-title {
+  font-size: 16px; /* Tamaño del texto */
+  font-weight: bold;
+  text-align: center;
+  color: hsl(220, 70%, 50%); /* Azul vibrante */
+}
+
+ion-buttons ion-button { /* Fondo transparente */
+  --color: hsl(220, 70%, 50%); /* Azul vibrante para el texto del botón */
+  font-size: 13px;
+}
+
+ion-buttons ion-button:hover {
+  --background: hsl(220, 70%, 25%); /* Fondo azul suave al pasar el mouse */
+}
+
+/*style para el calendario*/
+/* Contenedor principal para centrar la tarjeta en la página */
+.datetime-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  padding: 0;
+}
+
+/* Estilo general para la tarjeta del ion-datetime */
+.datetime-card {
+  --white: hsl(0, 0%, 100%);
+  --black: hsl(220, 25%, 15%);
+  --paragraph: hsl(220, 15%, 75%);
+  --line: hsl(220, 20%, 25%);
+  --primary: hsl(220, 70%, 50%);
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra el contenido horizontalmente */
+  justify-content: center; /* Centra el contenido verticalmente */
+
+  padding: 16px;
+  width: 304px;
+  background-color: hsla(240, 15%, 9%, 1);
+  background-image: radial-gradient(
+      at 88% 40%,
+      hsla(240, 15%, 9%, 1) 0px,
+      transparent 85%
+    ),
+    radial-gradient(at 49% 30%, hsla(220, 25%, 15%, 1) 0px, transparent 85%),
+    radial-gradient(at 14% 26%, hsla(220, 25%, 15%, 1) 0px, transparent 85%),
+    radial-gradient(at 0% 64%, hsl(220, 70%, 30%) 0px, transparent 85%),
+    radial-gradient(at 41% 94%, hsl(220, 60%, 35%) 0px, transparent 85%),
+    radial-gradient(at 100% 99%, hsl(220, 80%, 25%) 0px, transparent 85%);
+
+  border-radius: 16px;
+  box-shadow: 0px -16px 24px 0px rgba(255, 255, 255, 0.25) inset;
+}
+
+/* Borde decorativo */
+.datetime-card__border {
+  overflow: hidden;
+  pointer-events: none;
+
+  position: absolute;
+  z-index: -10;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  background-image: linear-gradient(
+    0deg,
+    hsl(220, 70%, 50%) -50%,
+    hsl(220, 20%, 30%) 100%
+  );
+
+  border-radius: 16px;
+}
+
+/* Animación del borde */
+.datetime-card__border::before {
+  content: "";
+  pointer-events: none;
+
+  position: fixed;
+  z-index: 200;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%), rotate(0deg);
+  transform-origin: left;
+
+  width: 200%;
+  height: 160px;
+  background-image: linear-gradient(
+    0deg,
+    hsla(0, 0%, 100%, 0) 0%,
+    hsl(220, 70%, 50%) 40%,
+    hsl(220, 70%, 50%) 60%,
+    hsla(220, 20%, 30%, 0) 100%
+  );
+
+  animation: rotate 8s linear infinite;
+}
+
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Estilo para el ion-datetime */
+.datetime {
+  width: 100%;
+  max-height: 350px;
+  background: transparent;
+  border: 1px solid var(--line);
+  color: var(--white);
+  font-size: 16px;
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.1);
+  padding: 8px;
+}
+
+.datetime::part(title),
+.datetime::part(date) {
+  color: var(--white);
+}
+
+.datetime:hover {
+  border-color: var(--primary);
+  box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.2);
+}
+
+.id-sigla{
+  display: flex;
+}
+
+.push{
+  margin-left: auto;
+}
+
+.card_paragraph{
+  color: #f9f9f9;
+}
+
+
+//css listo

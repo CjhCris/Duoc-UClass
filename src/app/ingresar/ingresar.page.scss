@@ -1,0 +1,76 @@
+.example-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  border-radius: 20px; /* Bordes redondeados */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Sombra elegante */
+  padding: 20px; /* Espaciado interno */
+  text-align: center; /* Centrado del texto */
+}
+
+.qr-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Permite organizar elementos verticalmente */
+  height: 100%;
+  text-align: center;
+  border-radius: 16px; /* Bordes redondeados */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5), inset 0px -10px 20px rgba(255, 255, 255, 0.1); /* Sombra */
+  padding: 20px; /* Espaciado interno */
+}
+
+.qr-content h2 {
+  font-size: 40px; /* Tamaño grande del texto */
+  font-weight: bold; /* Negrita */
+  margin: 0; /* Elimina el margen por defecto */
+  color: #000000; /* Color complementario */
+}
+
+
+//css listo
+
+ion-header {
+  --background: hsl(220, 25%, 15%); /* Fondo azul oscuro */
+  --color: hsl(220, 15%, 75%); /* Texto en azul grisáceo */
+  --ion-toolbar-border-color: hsl(220, 20%, 25%); /* Borde azul claro */
+}
+
+ion-toolbar {
+  --background: hsl(220, 25%, 15%); /* Fondo del toolbar */
+  --color: hsl(220, 15%, 75%); /* Color del texto */
+}
+
+ion-title {
+  font-size: 16px; /* Tamaño del texto */
+  font-weight: bold;
+  text-align: center;
+  color: hsl(220, 70%, 50%); /* Azul vibrante */
+}
+
+ion-buttons ion-button { /* Fondo transparente */
+  --color: hsl(220, 70%, 50%); /* Azul vibrante para el texto del botón */
+  font-size: 13px;
+}
+
+ion-tab-bar {
+  --ion-tab-bar-background: hsl(220, 25%, 15%); /* Azul oscuro para el fondo */
+  --ion-tab-bar-border-color: hsl(220, 20%, 25%); /* Azul claro para el borde */
+  --color: hsl(220, 15%, 75%); /* Azul grisáceo para los íconos y texto inactivos */
+  --color-selected: hsl(220, 70%, 50%); /* Azul vibrante para el seleccionado */
+}
+
+ion-tab-button {
+  font-size: 13px; /* Ajusta el tamaño del texto */
+  --ripple-color: hsl(220, 70%, 50%); /* Color de la animación ripple */
+}
+
+ion-icon {
+  font-size: 16px; /* Tamaño del ícono */
+}
+
+ion-label {
+  margin-top: 3px; /* Ajuste de espacio entre el ícono y el texto */
+}
+
