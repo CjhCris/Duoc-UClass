@@ -3,9 +3,6 @@
     <ion-toolbar color="translucid">
       <img class="logo" src="\assets\logo\Duoc Uclass.png" alt="">
       <ion-buttons slot="end">
-        <ion-button>
-          <ion-icon slot="icon-only" name="notifications-outline" aria-label="Notificaciones" color="light"></ion-icon>
-        </ion-button>
         <ion-button (click)="toggleTheme()">
           <ion-icon [name]="currentTheme === 'dark' ? 'moon' : 'sunny'" slot="icon-only" color="light"></ion-icon>
         </ion-button>

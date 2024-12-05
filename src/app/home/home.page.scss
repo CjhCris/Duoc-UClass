@@ -135,11 +135,11 @@ body.dark .container {
   --background: var(--ion-color-danger); /* Fondo sólido sin gradiente */
 }
 
-::ng-deep .alert-wrapper {
-  background-color: white !important;
-  color: black !important;
+ion-modal::part(content) {
+  background: #ffffff !important; /* Fondo blanco */
+  color: #000000 !important;     /* Texto negro */
 }
 
-::ng-deep .alert-button {
-  color: black !important;
+ion-modal::part(backdrop) {
+  background: rgba(0, 0, 0, 0.5) !important; /* Fondo del overlay */
 }
