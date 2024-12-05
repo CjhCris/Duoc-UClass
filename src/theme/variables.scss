@@ -20,18 +20,24 @@ body.barcode-scanning-active {
     color: black;
 }
   
-  .alert-head.sc-ion-alert-md {
-    -webkit-padding-start: 23px;
-    padding-inline-start: 23px;
-    -webkit-padding-end: 23px;
-    padding-inline-end: 23px;
-    padding-top: 20px;
-    padding-bottom: 15px;
-    text-align: justify;
-    color: black !important;
-    background: linear-gradient(135deg, #e1ad01, #A88905);
-    text-align: center;
+
+
+.action-sheet-title.sc-ion-action-sheet-md {
+  -webkit-padding-start: 16px;
+  padding-inline-start: 16px;
+  -webkit-padding-end: 16px;
+  padding-inline-end: 16px;
+  padding-top: 20px;
+  padding-bottom: 17px;
+  min-height: 60px;
+  background: linear-gradient(135deg, #e1ad01, #A88905) !important;
+  font-size: 1rem;
+  text-align: start;
+  color: black;
 }
+
+
+
 
 .alert-head.sc-ion-alert-md+.alert-message.sc-ion-alert-md {
   padding-top: 10px;
