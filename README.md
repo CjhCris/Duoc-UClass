@@ -48,3 +48,7 @@
 ## Licencia 📜
 
 Este proyecto está bajo el control exclusivo del equipo de desarrollo de **Duoc UClass** y no está abierto a contribuciones externas por el momento.
+
+## Descarga Duoc UClass📜
+
+[APK](https://github.com/CjhCris/Duoc-UClass/tree/main/APK)
