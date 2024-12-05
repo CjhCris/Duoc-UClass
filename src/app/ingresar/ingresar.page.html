@@ -1,22 +1,15 @@
 <ion-tabs>
-  <ion-tab tab="home">
-    <ion-header>
-      <ion-toolbar>
-        <ion-title>Ingresar a clases</ion-title>
-      </ion-toolbar>
-    </ion-header>
-
-  </ion-tab>
+  <ion-header [translucent]="true">
+    <img class="logo" src="\assets\logo\Duoc Uclass.png" alt="">
+  </ion-header>
 
   <ion-tab tab="qr">
     <ion-header>
-      <ion-toolbar>
-        <ion-title>Escanear QR</ion-title>
-      </ion-toolbar>
+     
     </ion-header>
 
     <ion-content class="qr-content">
-      <h2>Escanear QR</h2>
+      <br><br><h2>Escanear QR</h2>
 
       <div class="escaner">
         <ion-item class="resultado" *ngIf="resultadoScan" lines="none">

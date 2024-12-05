@@ -14,6 +14,16 @@
     --hover-color: #0056b3; /* Color de hover */
   }
   
+  h4 {
+    text-align: center;
+    margin-left: 20px;
+  }
+
+  .logo{
+    width: 100px;
+    background-color: transparent;
+  }
+
   #open-action-sheet {
     justify-content: center;
     margin-top: 50%;
@@ -29,6 +39,8 @@
     justify-content: center;
     text-align: center;
   }
+  
+  
   
   .boton,
   .Volver-btn ion-button {

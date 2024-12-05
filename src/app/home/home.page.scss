@@ -7,6 +7,12 @@
   transform: translateY(-50%);
 }
 
+.logo{
+  width: 100px;
+  background-color: transparent;
+}
+
+
 ion-icon {
   font-size: 28px; /* Ajustar el tamaño del icono */
   color: var(--ion-color-primary);
@@ -31,13 +37,14 @@ body.dark .container {
 }
 
 .container{
-  margin: auto; 
+  justify-content: center;
+  margin-right: 100px;
   margin-top: 20%;
   margin-bottom: 20px;
   width: 100%;
-  background: linear-gradient(135deg, #3c27ae, #167fd4);
+  background: linear-gradient(135deg, #e1ad01, #A88905);
   padding: 20px;
-  color: white;
+  color: black;
   text-align: left;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -63,8 +70,8 @@ body.dark .container {
   width: 70%; 
   height: 70px; 
   font-size: 25px;
-  --background: linear-gradient(145deg, #6ca3fc, #17158e);
-  color: white;
+  --background: linear-gradient(135deg, #e1ad01, #A88905);;
+  color: Black;
   border-radius: 10px;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2), -5px -5px 10px rgba(255, 255, 255, 0.2);
   font-weight: bold;

@@ -20,10 +20,6 @@ const routes: Routes = [
     loadChildren: () => import('./pages/recuperar/recuperar.module').then( m => m.RecuperarPageModule)
   },
   {
-    path: 'quienes-somos',
-    loadChildren: () => import('./quienes-somos/quienes-somos.module').then( m => m.QuienesSomosPageModule)
-  },
-  {
     path: 'asignaturas',
     loadChildren: () => import('./asignaturas/asignaturas.module').then( m => m.AsignaturasPageModule)
   },
@@ -38,7 +34,8 @@ const routes: Routes = [
   {
     path: 'crear-clase',
     loadChildren: () => import('./crear-clase/crear-clase.module').then( m => m.CrearClasePageModule)
-  },  {
+  },
+  {
     path: 'asignaturas-profesor',
     loadChildren: () => import('./asignaturas-profesor/asignaturas-profesor.module').then( m => m.AsignaturasProfesorPageModule)
   },
@@ -58,10 +55,7 @@ const routes: Routes = [
     path: 'ver-asistencia',
     loadChildren: () => import('./ver-asistencia/ver-asistencia.module').then( m => m.VerAsistenciaPageModule)
   },
-  {
-    path: 'contact',
-    loadChildren: () => import('./contact/contact.module').then( m => m.ContactPageModule)
-  },
+  
 
   
     
