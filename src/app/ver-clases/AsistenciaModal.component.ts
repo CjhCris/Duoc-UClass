@@ -59,6 +59,10 @@ import { ActionSheetController } from '@ionic/angular';
             padding: 10px;
         }
                 }
+
+        ion-action-sheet .action-sheet-button {
+            color: white !important;
+        }
     `,
     ],
 })

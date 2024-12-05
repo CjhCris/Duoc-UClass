@@ -21,6 +21,10 @@ body.barcode-scanning-active {
     }
   }
   
+  ion-action-sheet .action-sheet-button {
+  color: white !important;
+}
+
   // Theme variables
   :root {
     /** Primary **/
@@ -94,6 +98,9 @@ body.barcode-scanning-active {
     --ion-color-light-contrast-rgb: 0, 0, 0;
     --ion-color-light-shade: #d7d8da;
     --ion-color-light-tint: #f5f6f9;
+
+    /** ion-datetime**/
+    --ion-color-step-300: #333333;
   }
   
   /** Dark Mode **/
@@ -148,6 +155,8 @@ body.barcode-scanning-active {
     --ion-toolbar-background: #1f1f1f;
     --ion-item-background: #1e1e1e;
     --ion-card-background: #1e1e1e;
+
+    --ion-color-step-300: #333333;
   }
   
 

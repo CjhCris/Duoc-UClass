@@ -37,6 +37,11 @@
   ion-list {
     --background: transparent;
   }
+
+  ion-datetime::part(time-body) {
+        background-color: var(--ion-color-step-300);
+        color: var(--text-light);
+      }
   
   /* Estilo de los items dentro de ion-list */
   ion-item {
@@ -64,10 +69,8 @@
         color: var(--text-light);
       }
   
-      ion-input,
-      ion-datetime {
-        --background: var(--input-bg-dark);
-        --border-color: var(--border-color-dark);
+      ion-datetime::part(time-body) {
+        background-color: var(--ion-color-step-300);
         color: var(--text-light);
       }
     }

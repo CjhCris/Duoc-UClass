@@ -8,8 +8,11 @@
     <ion-list>
       <!-- Fecha -->
       <ion-item>
-        <ion-datetime [(ngModel)]="fecha" label="Fecha" placeholder="Seleccione la fecha" 
-        display-format="YYYY-MM-DD" [min]="minFecha"></ion-datetime>
+        <ion-datetime  [(ngModel)]="fecha" label="Fecha" placeholder="Seleccione la fecha" 
+        display-format="YYYY-MM-DD" [min]="minFecha">
+        <span slot="time-label">Hora</span>
+      </ion-datetime>
+        
       </ion-item>
 
       <!-- Hora de Inicio -->
