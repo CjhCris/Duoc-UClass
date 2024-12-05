@@ -11,7 +11,7 @@
 - **Historial de asistencia:** Los estudiantes pueden revisar sus registros de asistencia a lo largo del curso.
 - **Roles específicos:**  
   - **Profesor:** Configura asignaturas, genera clases, y administra registros de asistencia.  
-  - **Estudiante:** Accede a clases mediante QR y consulta su historial de asistencia.
+  - **Estudiante:** Accede a clases mediante QR y consulta sus Asignaturas matriculadas.
 - **Notificaciones por email:** En casos específicos, se envían notificaciones por correo electrónico.
 
 ---
@@ -34,7 +34,7 @@
 2. **Para estudiantes:**
    - Inicia sesión en la aplicación.
    - Escanea el código QR proporcionado por el profesor.
-   - Consulta tu historial de asistencia en cualquier momento.
+   - Consulta tus asignaturas en cualquier momento.
 
 ---
 
