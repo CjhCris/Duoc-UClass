@@ -1,32 +1,32 @@
-<ion-header [translucent]="true">
-  <img class="logo" src="\assets\logo\Duoc Uclass.png" alt="">
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-    </ion-toolbar>
+<body color-theme="light">
+  <ion-header [translucent]="true">
+    <img class="logo" src="\assets\logo\Duoc Uclass.png" alt="">
   </ion-header>
 
-  <div id="container">
-    <h1>Restablece tu contraseña</h1>
+  <ion-content [fullscreen]="true">
+    <ion-header collapse="condense">
+    </ion-header>
 
-<br><br>
-    <h4>Te enviaremos un correo con una nueva contraseña</h4>
+    <div id="container">
+      <h1>Restablece tu contraseña</h1>
 
-    <ion-list>
-      <ion-item>
-        <ion-input [(ngModel)]="correo" label="Correo: " type="email" placeholder="Ingrese su Correo"></ion-input>
-        <div *ngIf="correo.length < 10 && correo.length > 0">
-          <ion-label color="danger">Correo inválido</ion-label>
-        </div>
-      </ion-item>
-    </ion-list>
-    <ion-button class="boton" (click)="recuperar()">Recuperar Contraseña</ion-button><br>
-  </div>
-  <div class="Volver-btn">
-    <ion-button color= "tertiary" routerLink="/login">Volver</ion-button> 
-  </div>
+  <br><br>
+      <h4>Te enviaremos un correo con una nueva contraseña</h4>
 
-  
-</ion-content>
+      <ion-list>
+        <ion-item>
+          <ion-input [(ngModel)]="correo" label="Correo: " type="email" placeholder="Ingrese su Correo"></ion-input>
+          <div *ngIf="correo.length < 10 && correo.length > 0">
+            <ion-label color="danger">Correo inválido</ion-label>
+          </div>
+        </ion-item>
+      </ion-list>
+      <br>
+      <ion-button class="boton" (click)="recuperar()">Recuperar Contraseña</ion-button><br>
+      <ion-button color= "tertiary" routerLink="/login">Volver</ion-button> 
+    </div>
+    
+
+    
+  </ion-content>
+</body>  

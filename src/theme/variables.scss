@@ -98,7 +98,7 @@ body.barcode-scanning-active {
   
   /** Dark Mode **/
   body[color-theme="dark"] {
-    --ion-color-primary: #428cff;
+    --ion-color-primary: linear-gradient(135deg, #e1ad01, #A88905);
     --ion-color-primary-rgb: 66, 140, 255;
     --ion-color-primary-contrast: #ffffff;
     --ion-color-primary-contrast-rgb: 255, 255, 255;

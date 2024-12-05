@@ -124,7 +124,7 @@ ion-item {
 }
 
 ion-button {
-  --background: linear-gradient(145deg, #6ca3fc, #17158e);
+  --background: linear-gradient(135deg, #e1ad01, #A88905);
   --color: #fff;
 }
 .boton:hover {
@@ -136,5 +136,15 @@ ion-button {
   transform: scale(0.95); 
   box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.25);}
 
-
+  ion-button {
+    width: 100%; /* Asegura que el botón ocupe el 100% del ancho disponible */
+    margin-top: 16px; /* Agrega espacio entre los botones */
+  }
+  
+  .d-flex {
+    display: flex;
+    flex-direction: column; /* Para que los botones se apilen uno debajo del otro */
+    gap: 16px; /* Espacio entre los botones */
+  }
+  
   //css listo

@@ -1,110 +1,99 @@
 :root {
-    --primary-bg-light: #f9f9f9; /* Fondo claro */
-    --primary-bg-dark: #121212; /* Fondo oscuro */
-    --input-bg-light: #ffffff; /* Fondo de inputs en modo claro */
-    --input-bg-dark: #333333; /* Fondo de inputs en modo oscuro */
-    --card-bg-light: #ffffff; /* Fondo de las tarjetas en modo claro */
-    --card-bg-dark: #1e1e1e; /* Fondo de las tarjetas en modo oscuro */
-    --button-bg-light: #007bff; /* Color de fondo de los botones */
-    --button-bg-dark: #444; /* Color de fondo de los botones en modo oscuro */
-    --text-light: #fff; /* Texto blanco */
-    --text-dark: #121212; /* Texto negro */
-    --border-color-light: #ddd; /* Borde claro */
-    --border-color-dark: #444; /* Borde oscuro */
-    --hover-color: #0056b3; /* Color de hover */
-  }
-  
-  h4 {
-    text-align: center;
-    margin-left: 20px;
-  }
+  --primary-bg-light: #f9f9f9;
+  --primary-bg-dark: #121212;
+  --input-bg-light: #ffffff;
+  --input-bg-dark: #333333;
+  --button-bg-light: #007bff;
+  --button-bg-dark: #444;
+  --text-light: #fff;
+  --text-dark: #121212;
+  --border-color-light: #ddd;
+  --border-color-dark: #444;
+  --hover-color: #0056b3;
+}
 
-  .logo{
-    width: 100px;
-    background-color: transparent;
-  }
+h4 {
+  text-align: center;
+  margin-top: 8px;
+}
 
-  #open-action-sheet {
-    justify-content: center;
-    margin-top: 50%;
-    padding-left: 25%;
-  }
-  
-  #ion-label-b {
-    padding-left: 80%;
-  }
-  
-  ion-title {
-    font-size: medium;
-    justify-content: center;
-    text-align: center;
-  }
-  
-  
-  
-  .boton,
-  .Volver-btn ion-button {
-    width: 50%;
-    height: 40px;
-    margin-left: 25%; 
-    margin-top: center;
-    background-color: var(--button-bg-light);
-    color: #fff;
-    border-radius: 8px;
-  
-    &:hover {
-      background-color: var(--hover-color);
-    }
-  
-    .dark-mode & {
-      background-color: var(--button-bg-dark);
-  
-      &:hover {
-        background-color: var(--hover-color);
-      }
-    }
-  }
-  
-  ion-list {
-    margin-top: 10%;
-    margin-left: 10%;
-    margin-right: 10%;
-    --background: transparent;
-  }
-  
-  ion-item {
-    background-color: var(--input-bg-light);
-    border: 1px solid var(--border-color-light);
-    margin-bottom: 16px;
-    border-radius: 8px;
-  
-    ion-label {
-      color: var(--text-dark);
-    }
-  
-    ion-input,
-    ion-datetime {
-      --background: var(--input-bg-light);
-      --border-color: var(--border-color-light);
-    }
-  
-    .dark-mode & {
-      background-color: var(--input-bg-dark);
-      border-color: var(--border-color-dark);
-  
-      ion-label {
-        color: var(--text-light);
-      }
-  
-      ion-input,
-      ion-datetime {
-        --background: var(--input-bg-dark);
-        --border-color: var(--border-color-dark);
-        color: var(--text-light);
-      }
-    }
-  }
-  
-  h1 {
-    margin-left: 13%;
-  }
+h1 {
+  text-align: center;
+  margin-top: 50px;
+}
+
+#container {
+  text-align: center;
+  padding: 20px;
+}
+
+.logo {
+  width: 100px;
+  background-color: transparent;
+}
+
+ion-title {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+ion-list {
+  margin-top: 20px;
+  --background: transparent;
+}
+
+ion-item {
+  background-color: var(--input-bg-light);
+  border: 1px solid var(--border-color-light);
+  margin-bottom: 16px;
+  border-radius: 8px;
+}
+
+ion-input,
+ion-textarea {
+  --padding-start: 16px;
+}
+
+ion-button {
+  width: 100%; /* Establece el ancho al 100% para ocupar todo el espacio */
+  height: 40px;
+  border-radius: 8px;
+  background-color: var(--button-bg-light);
+  color: #fff;
+  margin-bottom: 16px; /* Agrega espacio entre los botones */
+}
+
+ion-button:hover {
+  background-color: var(--hover-color);
+}
+
+.dark-mode ion-button {
+  background-color: var(--button-bg-dark);
+}
+
+.dark-mode ion-button:hover {
+  background-color: var(--hover-color);
+}
+
+.Volver-btn ion-button {
+  width: 100%; /* Establece el ancho al 100% para ocupar todo el espacio */
+  margin-top: 20px;
+  background-color: var(--button-bg-light);
+}
+
+.dark-mode .Volver-btn ion-button {
+  background-color: var(--button-bg-dark);
+}
+
+.dark-mode .Volver-btn ion-button:hover {
+  background-color: var(--hover-color);
+}
+
+ion-label {
+  color: var(--text-dark);
+}
+
+.dark-mode ion-label {
+  color: var(--text-light);
+}
