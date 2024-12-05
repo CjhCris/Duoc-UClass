@@ -1,6 +1,6 @@
-# CheckClAPP 📚
+# Duoc UClass 📚
 
-**CheckClAPP** es una aplicación móvil diseñada para simplificar el registro de asistencia en clases de educación superior mediante el uso de códigos QR. Esta herramienta permite a profesores y estudiantes gestionar eficientemente la asistencia, optimizando el seguimiento de clases.
+**Duoc UClass** es una aplicación móvil diseñada para simplificar el registro de asistencia en clases de educación superior mediante el uso de códigos QR. Esta herramienta permite a profesores y estudiantes gestionar eficientemente la asistencia, optimizando el seguimiento de clases.
 
 ---
 
@@ -23,7 +23,7 @@
 
 ---
 
-## Cómo usar CheckClAPP 📱
+## Cómo usar Duoc UClass 📱
 
 1. **Para profesores:**
    - Inicia sesión en la aplicación.
