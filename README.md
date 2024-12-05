@@ -47,4 +47,4 @@
 
 ## Licencia 📜
 
-Este proyecto está bajo el control exclusivo del equipo de desarrollo de **CheckClAPP** y no está abierto a contribuciones externas por el momento.
+Este proyecto está bajo el control exclusivo del equipo de desarrollo de **Duoc UClass** y no está abierto a contribuciones externas por el momento.
